@@ -1,0 +1,162 @@
+.footer {
+  background: #111111;
+  color: #ffffff;
+  padding: 80px 40px 30px;
+  border-top: 1px solid #222222;
+}
+
+.footerGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1.2fr;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.footerColumn h3 {
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerColumn ul li {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  line-height: 1.6;
+}
+
+.footerColumn ul li:hover {
+  color: #e31837; /* Đổi hiệu ứng hover chữ sang đỏ racing */
+  transform: translateX(4px);
+}
+
+.contactList li {
+  cursor: default !important;
+}
+
+.contactList li:hover {
+  transform: none !important;
+  color: #a1a1aa !important;
+}
+
+.footerDesc {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Hộp đăng ký nhận sự kiện lái thử & khuyến mãi */
+.subscribeBox {
+  display: flex;
+  border: 1px solid #27272a;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.subscribeBox:focus-within {
+  border-color: #e31837;
+}
+
+.subscribeBox input {
+  flex: 1;
+  background: #18181b;
+  border: none;
+  color: #fff;
+  padding: 14px 16px;
+  font-size: 0.85rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.subscribeBox input::placeholder {
+  color: #52525b;
+}
+
+.subscribeBox button {
+  background: #ffffff;
+  color: #111111;
+  border: none;
+  padding: 14px 24px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: inherit;
+}
+
+.subscribeBox button:hover {
+  background: #e31837;
+  color: #fff;
+}
+
+.footerBottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  border-top: 1px solid #222222;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.75rem;
+  color: #71717a;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.legalLinks span {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.legalLinks span:hover {
+  color: #fff;
+}
+
+.separator {
+  cursor: default !important;
+  opacity: 0.2;
+}
+
+.region {
+  font-size: 0.75rem;
+  color: #a1a1aa;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

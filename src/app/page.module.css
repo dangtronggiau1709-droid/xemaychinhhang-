@@ -1,0 +1,422 @@
+.container {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* ========== HERO BANNER ENGINE POWER ========== */
+.heroSection {
+  padding: 140px 60px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  min-height: 85vh;
+}
+
+.heroContent {
+  flex: 1;
+}
+
+.heroTag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e31837;
+  font-weight: 800;
+  margin-bottom: 25px;
+  background: rgba(227, 24, 55, 0.08);
+  padding: 6px 16px;
+  border-radius: 4px;
+}
+
+.heroTitle {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #111111 60%, #e31837);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.heroBtnPrimary {
+  background: #111111;
+  color: #fff;
+  border: none;
+  padding: 18px 44px;
+  border-radius: 4px; /* Góc vuông cứng cáp, cơ khí hơn */
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+
+.heroBtnPrimary:hover {
+  background: #e31837;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(227, 24, 55, 0.3);
+}
+
+.heroBtnSecondary {
+  background: transparent;
+  color: #111;
+  border: 1.5px solid #111;
+  padding: 18px 44px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+
+.heroBtnSecondary:hover {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: #e31837;
+  color: #e31837;
+}
+
+.heroImage {
+  flex-shrink: 0;
+}
+
+.heroImage img {
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.18));
+}
+
+/* ========== BRAND PILL BAR (HONDA, YAMAHA...) ========== */
+.categoryBarWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  margin-bottom: 50px;
+}
+
+.categoryBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f4f4f6;
+  border-radius: 6px;
+  padding: 6px;
+  position: relative;
+  width: fit-content;
+}
+
+.activePill {
+  position: absolute;
+  height: calc(100% - 12px);
+  background: #e31837; /* Khối đỏ chạy mượt theo hãng xe chọn */
+  border-radius: 4px;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.categoryItem {
+  padding: 12px 28px;
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.categoryItem:hover {
+  color: #111;
+}
+
+.activeText {
+  color: #fff !important;
+}
+
+/* ========== MAIN LAYOUT ========== */
+.mainLayout {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px 80px;
+  gap: 40px;
+}
+
+.mainContent {
+  flex: 3;
+}
+
+.sectionHeading {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  border-left: 4px solid #e31837;
+  padding-left: 15px;
+}
+
+/* ========== MOTORBIKE GRID CARD ========== */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.product {
+  background: #ffffff;
+  border: 1px solid #eef0f2;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.product.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--delay, 0) * 0.1s);
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  border-color: #cbd5e1;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+}
+
+.product a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tag Trạng thái xe (Trả góp 0%, Phiên bản giới hạn) */
+.badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #e31837;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(227, 24, 55, 0.2);
+}
+
+.productImage {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.productImage img {
+  mix-blend-mode: multiply;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.product:hover .productImage img {
+  /* Hiệu ứng zoom thẳng mạnh mẽ tiến về trước showroom */
+  transform: scale(1.08); 
+}
+
+.productInfo {
+  padding: 20px;
+}
+
+.productName {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.productPrice {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #e31837; /* Giá xe nổi bật màu đỏ */
+  margin-bottom: 6px;
+}
+
+.productRemain {
+  font-size: 0.8rem;
+  color: #71717a;
+  font-weight: 500;
+}
+
+/* ========== ACTION BUTTONS SNEAKER RETAIL ========== */
+.actionButtons {
+  display: flex;
+  padding: 0 20px 20px;
+  gap: 10px;
+}
+
+.buyBtn {
+  width: 100%;
+  padding: 14px;
+  background: #111111;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+
+.buyBtn:hover {
+  background: #e31837;
+}
+
+.cartBtn {
+  padding: 14px 18px;
+  background: #fff;
+  color: #111;
+  border: 1px solid #e4e4e7;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.cartBtn:hover {
+  background: #f4f4f6;
+  border-color: #111;
+}
+
+/* ========== SIDEBAR BỘ LỌC CÔNG SUẤT ========== */
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 110px;
+  align-self: flex-start;
+}
+
+.sidebarBox {
+  background: #fff;
+  border: 1px solid #eef0f2;
+  border-radius: 8px;
+  padding: 24px;
+  transition: 0.3s;
+}
+
+.sidebarBox:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+}
+
+.sidebarBox h4 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+.sidebarBox p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ========== REVEAL ANIMATION ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1100px) {
+  .mainLayout {
+    flex-direction: column;
+    padding: 0 30px 60px;
+  }
+  .sidebar {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .sidebarBox {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    padding: 120px 30px 40px;
+    text-align: center;
+    min-height: auto;
+  }
+  .heroSubtitle {
+    max-width: 100%;
+  }
+  .heroBtns {
+    justify-content: center;
+  }
+  .categoryBarWrapper {
+    padding: 0 20px;
+    overflow-x: auto;
+  }
+  .categoryBar {
+    width: max-content;
+  }
+  .productGrid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+}

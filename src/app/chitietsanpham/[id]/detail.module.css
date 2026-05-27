@@ -1,0 +1,366 @@
+.container {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 20px;
+}
+
+.notFound a {
+  color: #e31837;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+  padding: 120px 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.breadcrumb a {
+  color: #555;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: #e31837;
+}
+
+.breadSep {
+  margin: 0 10px;
+  opacity: 0.5;
+}
+
+/* DETAIL LAYOUT */
+.detailLayout {
+  display: flex;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 60px 60px;
+  align-items: flex-start;
+}
+
+.sliderArea {
+  flex: 1.2;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+  border: 1px solid #eef0f2;
+}
+
+.infoArea {
+  flex: 1;
+  padding-top: 10px;
+}
+
+.badge {
+  display: inline-block;
+  background: #e31837;
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 3px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.category {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-left: 10px;
+}
+
+.carName { 
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #111;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #e31837;
+}
+
+.oldPrice {
+  font-size: 1.2rem;
+  color: #a1a1aa;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.remain {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+/* NÚT THAO TÁC MUA XE */
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  padding: 18px 45px;
+  background: #111111;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+
+.btnPrimary:hover {
+  background: #e31837;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(227, 24, 55, 0.25);
+}
+
+.btnSecondary {
+  padding: 18px 45px;
+  background: none;
+  color: #111;
+  border: 1.5px solid #e4e4e7;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+}
+
+.btnSecondary:hover {
+  border-color: #111;
+  background: #f4f4f6;
+}
+
+/* BẢNG THÔNG SỐ CƠ KHÍ ENGINE */
+.specsSection {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 60px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  border-left: 4px solid #e31837;
+  padding-left: 12px;
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  background: #e4e4e7;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e4e4e7;
+}
+
+.specItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 28px;
+  background: #ffffff;
+  transition: 0.2s;
+}
+
+.specItem:hover {
+  background: #fcfdfe;
+}
+
+.specLabel {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.specValue {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: right;
+  color: #111;
+}
+
+/* ĐÁNH GIÁ TRẢI NGHIỆM LÁI XE (RIDE REVIEW) */
+.reviewSection {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 60px 60px;
+}
+
+.reviewContent {
+  background: #f8f9fa;
+  border: 1px solid #eef0f2;
+  border-radius: 8px;
+  padding: 50px;
+}
+
+.reviewContent h3 {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.reviewContent p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.reviewQuote {
+  margin-top: 30px;
+  padding: 30px;
+  border-left: 4px solid #e31837; /* Đổi viền trích dẫn sang đỏ */
+  background: #fff;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.reviewQuote blockquote {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* GỢI Ý XE LIÊN QUAN (SUGGESTIONS) */
+.relatedSection {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 60px 80px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.relatedCard {
+  background: #fff;
+  border: 1px solid #eef0f2;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.relatedCard:hover {
+  transform: translateY(-5px);
+  border-color: #cbd5e1;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+}
+
+.relatedImage {
+  height: 180px;
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.relatedImage img {
+  mix-blend-mode: multiply;
+  transition: transform 0.5s ease;
+}
+
+.relatedCard:hover .relatedImage img {
+  transform: scale(1.06);
+}
+
+.relatedInfo {
+  padding: 18px;
+}
+
+.relatedInfo h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.relatedInfo span {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #e31837;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .detailLayout {
+    flex-direction: column;
+    padding: 20px 30px 40px;
+  }
+  .sliderArea {
+    height: 350px;
+    width: 100%;
+  }
+  .specsSection,
+  .reviewSection,
+  .relatedSection {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .reviewContent {
+    padding: 30px;
+  }
+  .breadcrumb {
+    padding: 120px 30px 20px;
+  }
+}
